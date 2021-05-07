@@ -8,7 +8,7 @@ const clientID = process.env.GITHUB_AUTH_ID;
 
 router.get('/', (req, res) => {
   console.log('logging in');
-  res.status(200).redirect(`https://github.com/login/oauth/authorize?client_id=${clientID}&scope=repo`);
+  res.status(200).redirect(`https://github.com/login/oauth/authorize?client_id=${clientID}&scope=repo%20write:org`);
 });
 
 module.exports = router;
